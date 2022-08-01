@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto de Observacion</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+</head>
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo">
+        <a class="navbar-brand" href="#"><strong>PDO</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Calculadora</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="view intro-2">
+        <div class="full-bg-img">
+            <div class="mask rgba-black-light flex-center">
+                <div class="container text-center white-text">
+                    <div class="white-text text-center wow fadeInUp">
+                        <h2 class="titulos">Bienvenides a Punto de Observacion</h2>
+                        <h5 class="subtitulos">Nos encanta recomendar</h5>
+                        <br>
+                        <h5 class="subtitulos">Y que nos recomiendes</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- Seccion calculadora -->
+    <section class="conteinerCalculadora">
+        <div class="textoCalculadora">
+            <h2 class="subtitulos">Cuanto voy a gastar en mi destino? Descubri un aproximado aca:</h2>
+            <form class="text-center border border-light p-5" action="#!" id="formCalculadora">
+                <label for="sel1">Elegi el destino al que te gustaria ir: </label>
+                <select class="form-control mb-4" id="destino">
+                    <option>Cordoba</option>
+                    <option>Santa Fe</option>
+                    <option>Chubut</option>
+                    <option>Rio Negro</option>
+                </select>
+                <input type="text" id="presupuesto" class="form-control mb-4"
+                    placeholder="Presupuesto con el que contas">
+                <input type="text" id="dias" class="form-control mb-4" placeholder="Cuantos dias querias quedarte?">
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="" id="verDato">Te gustaria conocer mas sobre este
+                        destino?
+                    </label>
+                </div>
+                <button class="btn btn-info " type="submit" id="btnCalcular">Calcular</button>
+            </form>
+        </div>
+
+        <div id="resultados">
+        </div>
+        <div id="viajePosible"></div>
+        <div id="datoConteiner">
+        </div>
+
+    </section>
+
+
+    <!-- Formulario para agregar destinos -->
+
+    <form class="text-center border border-light p-5" action="#!" id="formulario">
+        <p class="h4 mb-4 subtitulos">El destino al que vas no esta? Ayudanos a recomendarlo! </p>
+        <!-- Nombre -->
+        <input type="text" id="nombre" class="form-control mb-4" placeholder="Nombre del destino*">
+        <!-- Distancia -->
+        <input type="text" id="distancia" class="form-control mb-4" placeholder="A que distancia esta de tu origen?*">
+        <!-- Valor Hotel -->
+        <input type="text" id="valorhotel" class="form-control mb-4"
+            placeholder="Cual es el costo promedio de un alojamiento?*">
+        <!-- Dato Curioso -->
+        <div class="form-group">
+            <textarea class="form-control rounded-0" id="datocurioso" rows="3"
+                placeholder="Dato curioso del destino"></textarea>
+        </div>
+        <!-- Boton de envio -->
+        <button class="btn btn-info btn-block" type="submit" id="btnEnvio">Enviar</button>
+        <button class="btn btn-secondary btn-block" type="submit" id="btnHistorial">Ver Agregados</button>
+    </form>
+
+    <div id="provinciaAgregada">
+    </div>
+
+    <div id="listaProvincias">
+        
+    </div>
+
+
+</main>
+
+<!-- Footer -->
+<footer class="page-footer font-small elegant-color">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+        <a href="/"> NDS</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+<!-- Links a JS -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="index.js"></script>
+<script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
+<script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+</body>
+
+</html>

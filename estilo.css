@@ -1,0 +1,40 @@
+
+
+.intro-2 {
+    background: url("Imagenes/alojamiento-en-bariloche.jpg")no-repeat center center;
+    background-size: cover;
+}
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+.indigo{
+    background-color: #1f2e5e !important;
+}
+
+.conteinerCalculadora {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 56px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #1f2e5e;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.titulos {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 80px;
+}
+
+.subtitulos{
+    font-family: 'Edu SA Beginner', cursive;
+    font-size: 50px;
+}
