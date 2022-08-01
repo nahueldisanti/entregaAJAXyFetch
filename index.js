@@ -248,7 +248,7 @@ function mostrarToastNoAprobado () {
 }
 
 function main() {
-
+    
     inicializarElementos();
     inicializarPropiedades();
     obtenerProvincias();
